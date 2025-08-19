@@ -1,7 +1,7 @@
 # ROVER: Robust Visual Loop Closure Verification with Trajectory Prior in Repetitive Environments
 :zap::zap: Code will be released soon, stay tune~
 
-[[Project Page]]()
+[[Project Page]](https://jarvisyjw.github.io/ROVER/)
 
 ## Overview
 ROVER is a loop closure verifier designed for graph SLAM frameworks in challenging repetitive environments. It leverages trajectory priors to enhance the robustness of loop closure verification, ensuring accurate and reliable loop detection even in scenarios with high visual similarity.
