@@ -1,0 +1,230 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.wide-only-title {
+max-width: 1400px; /* 想要的宽度 */
+margin: 0 auto 1.5rem;
+padding: 0 1.5rem;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}
+
+/* .wide-container {
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 1.5rem;
+width: 100%;
+} */
+
+.wide-video-container {
+max-width: 1200px;   /* 或 1200 / 1400 按需 */
+width: 80%;
+margin: 0 auto;
+padding: 0 1.5rem;
+}
+
+.video-wrapper {
+position: relative;
+aspect-ratio: 16 / 9;    /* 现代浏览器 */
+width: 100%;
+}
+
+.video-wrapper video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,.2);
+}
+
+.video-wrapper.narrow {
+max-width: 1000px;   /* 想要的最大宽度，比如 700/800/900 */
+margin: 0 auto;
+}
+.video-wrapper.narrow video {
+width: 100%;
+height: auto;
+display: block;
+}
+
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.wide-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 2%;
+  width: 100%;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .wide-container {
+    padding: 0 1rem;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .publication-title {
+    font-size: 1.5rem;
+  }
+}

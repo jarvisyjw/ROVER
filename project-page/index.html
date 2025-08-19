@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments">
+  <meta property="og:title" content="ROVER"/>
+  <meta property="og:description" content="ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments"/>
+  <meta property="og:url" content=""/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/teaser_rover_webpage.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments">
+  <meta name="twitter:description" content="ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/image/teaser_rover_webpage.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="ROVER, Loop Closure, Verification, Trajectory Prior, Repetitive Environments">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ROVER Project Page</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/ust-blue.jpeg"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero"> <div class="hero-body"> <div class="wide-only-title"> <h1 class="title is-1 publication-title has-text-centered">ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments</h1> </div> 
+  <div class="wide-container">
+
+ <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming soon)</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div> </div> </section>
+
+
+
+<!-- <section class="hero teaser">
+  <style>
+    /* Style for the section */
+    .hero.teaser {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    /* Style for the container */
+    .hero.teaser.container.is-max-desktop {
+      max-width: 200px; /* Adjust the maximum width */
+      margin: auto;
+    }
+
+    /* Style for the video */
+    .hero.teaser video {
+      width: 100%; /* Full width of the container */
+      height: auto;
+      object-fit: cover; /* Ensures the video fits nicely */
+      border-radius: 10px; /* Optional: rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow */
+    }
+
+    /* Style for the subtitle */
+    .hero.teaser .subtitle.has-text-centered {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+  </style>
+  <div class="hero teaser container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop>
+        Your video here -->
+        <!-- <source src="static/videos/rover_fullhd_2000.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero teaser"> <div class="wide-container"> 
+  <div class="video-wrapper narrow">
+
+  <div class="video-wrapper"> <video id="tree" autoplay controls muted loop> <source src="static/videos/rover_video_final_2000.mp4" type="video/mp4"> </video> </div> </div> </div> </section>
+<!-- End teaser video -->
+
+<section class="section hero is-small">
+  <div class="wide-container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+        Loop closure detection is important for simultaneous localization and mapping (SLAM), which associates current observations with historical keyframes, achieving drift correction and global relocalization. However, a falsely detected loop can be fatal, and this is especially difficult in repetitive environments where appearance-based features fail due to the high similarity. Therefore, verification of a loop closure is a critical step in avoiding false positive detections. Existing works in loop closure verification predominantly focus on learning invariant appearance features, neglecting the prior knowledge of the robot’s spatial-temporal motion cue, i.e., trajectory. In this letter, we propose ROVER, a loop closure verification method that leverages the historical trajectory as a prior constraint to reject false loops in challenging repetitive environments. For each loop candidate, it is first used to estimate the robot trajectory with pose-graph optimization. This trajectory is then submitted to a scoring scheme that assesses its compliance with the trajectory without the loop, which we consider to be the trajectory prior, to determine if the loop candidate should be accepted. Benchmark comparisons and real-world experiments demonstrate the effectiveness of the proposed method. Furthermore, we integrate ROVER into state-of-the-art SLAM systems to verify its robustness and efficiency. 
+          </p>
+          <figure>
+          <img style="display: block; margin-left: auto; margin-right: auto;" src="static/images/teaser_rover_webpage.png" alt="MY ALT TEXT" />
+          </figure>
+          <div class="content has-text-justified">
+          <p>
+            (a) A typical repetitive scenario where a SLAM algorithm (e.g., ORB-SLAM2) fails in appearance-based loop verification. I<sub>q</sub> is the current keyframe (i.e., query image) used to detect loop closures, I<sub>ri</sub> are the retrieved images among the map keyframes (i.e., reference database). Due to the visual similarity, geometric verification cannot disambiguate between true positives (green dot) and false positives (red dot). However, the proposed method incorporates the trajectory cues to reject false loops robustly. (b) Typical scenes where text and semantics-based methods fail. The upper row shows a false loop with repeated text, and the lower row contains a false loop with repeated objects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-small">
+  <div class="wide-container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">A typical repetitive scene</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following figure illustrates a typical repetitive environment where existing SLAM algorithms struggle with appearance-based loop closure verification.
+            The green line represents the trajectory of the moving robot. Different floors of the building exhibit highly similar appearances, making it challenging for traditional SLAM systems to distinguish between different locations based solely on appearance features. As a result, these systems often mistakenly identify false loops, leading to significant localization errors and map distortions.
+          </p>
+          <figure>
+          <img style="display: block; margin-left: auto; margin-right: auto; width: 70%;" src="static/images/escalator_repetitive_env_illustrative.png" alt="MY ALT TEXT" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="wide-container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Loop Closure Detection</h2>
+        <div class="content has-text-justified">
+        <p>
+          Two-stage Loop Closure Detection Pipeline. (i) Retrieval stage adopts image retrieval techniques to match historical keyframes. (ii) Verification stage serves as a binary classifier that rejects the falsely detected loop candidates.
+        </p>
+      <img style="display: block; margin-left: auto; margin-right: auto; width: 60%" src="static/images/lcd-pipelinev1.2.png" alt="MY ALT TEXT" />
+
+      </div>
+
+      <h2 class="title is-3">Trajectory Prior Constraint</h2>
+        <div class="content has-text-justified">
+          <p> 
+          Our work proposes to examine the changes in the robot’s trajectory before and after incorporating a loop constraint into PGO. Intuitively, adding a true loop to PGO, the change of the robot trajectory would be continuous and graceful; while adding a false loop, the change would be chaotic and catastrophic.
+          </p>
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 45%" src="static/images/method-v1.5.png" alt="MY ALT TEXT" />
+      </div>
+
+      <h2 class="title is-3">System Pipeline</h2>
+        <div class="content has-text-justified">
+          <p>
+            System overview of a complete SLAM pipeline with proposed loop verification method. Our main contribution lies in the verification stage (as explained in Section III-C), which takes loop constraints from the retrieval stage and the estimated trajectory from the front-end to predict a confidence score for rejecting false loops. In the end, the verified loops are accepted for the final back-end optimization.
+          </p>
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 85%" src="static/images/pipelinev1.6.png" alt="MY ALT TEXT" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-small">
+    <div class="wide-container">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <h2 class="title is-3">Experiment Results</h2>
+        <div class="content has-text-justified">
+        <p>
+          We conduct comprehensive experiments from two perspectives:
+          <ol>
+            <li>
+              <strong>Loop closure verification:</strong>
+              We compare the proposed work with GV baselines, which are normally employed as the verification stage of LCD. Moreover, SOTA visual place recognition methods are benchmarked in reference to the LCD’s retrieval stage.            
+                  <img style="display: block; margin-left: auto; margin-right: auto; width: 90%" src="static/images/exp-lcv.png" alt="MY ALT TEXT" />
+            </li>
+              <li>
+              <strong>Localization accuracy:</strong> 
+            We evaluate the localization accuracy by integrating the proposed method with visual SLAM baselines to demonstrate the practical efficacy.
+            <img style="display: block; margin-left: auto; margin-right: auto; width: 60%" src="static/images/exp-ate.png" alt="MY ALT TEXT" />
+            </figure>
+          </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  </body>
+  </html>
+
+<section class="section hero is-small">
+    <div class="wide-container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Visualization Results</h2>
+
+        <div class="content has-text-justified">
+        <p>
+          We visualize some typical examples of the proposed method on different datasets. The results demonstrate that our method can effectively reject false loops in challenging repetitive environments.
+        </p>
+
+          <figure>
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="static/images/traj_hotel-v1.2.png" alt="MY ALT TEXT" />
+        <figcaption> Trajectory comparison of the Hotel dataset.
+        </figcaption>
+      </figure>
+      <figure>
+          <img style="display: block; margin-left: auto; margin-right: auto; width: 100%" src="static/images/escalator_3d-1.6_compressed.png" alt="MY ALT TEXT" />
+        <figcaption> Trajectory comparison of the Escalator dataset. The colored point cloud is used for visualization only.</figcaption>
+      </figure>
+      <figure>
+          <img style="display: block; margin-left: auto; margin-right: auto; width: 100%" src="static/images/orbslam2-hotel.png" alt="MY ALT TEXT" />
+          <figcaption> ORB-SLAM2's mapping result w/ and w/o the proposed method on the Hotel dataset. </figcaption>
+      </figure>
+      <figure>
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 65%" src="static/images/orbslam2-warehouse.png" alt="MY ALT TEXT" />
+          <figcaption> ORB-SLAM2’s mapping result w/ and w/o the proposed method of the Warehouse dataset. There are no revisits in the dataset. Thus, ORB-SLAM2 w/ the proposed method produces a more accurate reconstruction. </figcaption>
+      </figure>
+        </div>  
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
