@@ -1,4 +1,4 @@
-# ROVER: Robust Visual Loop Closure Verification with Trajectory Prior in Repetitive Environments
+# ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments
 :zap::zap: Code will be released soon, stay tune~
 
 [[Project Page]](https://jarvisyjw.github.io/ROVER/)
